@@ -1,0 +1,6 @@
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+.Xil/

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue May 16 01:39:04 2023
+# Process ID: 3896
+# Current directory: D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9096 D:\XO-PersonalWorkspace\Personal_Project\OtherWorkspace\flow_led\flow_led.xpr
+# Log file: D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/vivado.log
+# Journal file: D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led\vivado.jou
+# Running On: XOVictus, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 33658 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.xpr
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/led03.v] -no_script -reset -force -quiet
+remove_files  D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/led03.v
+export_ip_user_files -of_objects  [get_files D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/constrs_1/new/led03.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/constrs_1/new/led03.xdc
+export_ip_user_files -of_objects  [get_files D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/utils_1/imports/synth_1/led03.dcp] -no_script -reset -force -quiet
+remove_files  -fileset utils_1 D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/utils_1/imports/synth_1/led03.dcp
+remove_files  D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/led03.v
+export_ip_user_files -of_objects  [get_files D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sim_1/new/led03_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sim_1/new/led03_tb.v
+add_files -norecurse {D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/flow_led.v D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/flow_led_tb.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/flow_led_tb.v] -no_script -reset -force -quiet
+remove_files  D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sources_1/new/flow_led_tb.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/sim_1/new/flow_led_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse D:/XO-PersonalWorkspace/Personal_Project/OtherWorkspace/flow_led/flow_led.srcs/constrs_1/new/flow_led.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
